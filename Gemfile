@@ -45,6 +45,10 @@ group :development, :test do
   gem 'quiet_assets'
 
 end
+
+group :production do
+  gem 'pg'
+end
 group :test do
   gem "shoulda-matchers"
   gem 'faker'
