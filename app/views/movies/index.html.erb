@@ -8,17 +8,19 @@
   <body>
 
     <%= content_tag :div, id: "movies", data: {movies: @m} do %>
-
     <% end %>
 
-
+  <form action="/" method="post" class="form-inline">
     <div class="contanier">
       <select class="combobox" name="movie.title" data-placeholder="">
         <% @movies.each do |movie|%>
         <option name = "movie.title" value="<%= movie.title%>"><%= movie.title%></option>
         <% end %>
       </select>
+      <input class="btn btn-primary btn-sm btn-size" type="submit" value="Show">
     </div>
+</form>
+
 
     <div id="map-canvas">
     </div>
@@ -79,15 +81,19 @@
           }
         }
 
-        
+
         content = "<div class='info'>";
         for(var index in movie_array) {
-          content += "<div>" + movie_array[index].title + "<br>" + "Actors:" + movie_array[index].actors.join(", ") + "<br>" +
+          content += "<p id='click'>" + movie_array[index].title +"</p>"+ "<br>" + "<div class='show-hide'>"+"Actors:" + movie_array[index].actors.join(", ") + "<br>" +
                     "Fun Fucts: " + movie_array[index].funfuct + "<br>" + "Release year: " + movie_array[index].release_year +
                     "<br>" + "Address: " + movie_array[index].address + "</div>";
           content += "<hr>";
         };
         content += "</div>";
+        $('#click').click(function() {
+           $('.show-hide').slideToggle('fast');
+            return false;
+       });
         var infowindow = new google.maps.InfoWindow()
         google.maps.event.addListener(marker, 'click', (function(marker, content, infowindow){
           return function() {
