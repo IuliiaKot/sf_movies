@@ -64,3 +64,18 @@ Brian Kang
 Brian Kang
 ignore the page stuff
 What are you working on?
+
+
+
+
+<%= form_tag movies_path, method: :post do %>
+    <div class="contanier">
+      <select class="combobox" name="movie.title" data-placeholder="">
+        <% @movies.each do |movie|%>
+        <option name = "movie.title" value="<%= movie.title%>"><%= movie.title%></option>
+        <% end %>
+      </select>
+    </div>
+
+    <%= link_to 'Call Action', movies_path, method: :post %>
+<% end %>

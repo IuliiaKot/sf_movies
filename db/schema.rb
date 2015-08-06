@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20150713191218) do
     t.string   "director"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "address"
+    t.text     "funfuct"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end

@@ -12,6 +12,8 @@ class CreateMovies < ActiveRecord::Migration
       t.string :director
       t.float :latitude
       t.float :longitude
+      t.string :address
+      t.text :funfuct
 
       t.timestamps null: false
     end

@@ -1,6 +1,9 @@
 // Place all the styles related to the Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+
+}
 #map-canvas {
   position:fixed;
   height:100vh;
@@ -21,7 +24,82 @@
   width: 400px;
 }
 
+#click {
+  font-size: 20px;
+  font-weight: bold;
+}
 
+.info {
+  border-radius: 12%;
+}
+.movie{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.info-movie {
+  font-size: 16px;
+}
+//
+// .main {
+//   border-bottom: 1px solid black;
+//   //margin-bottom: 20px;
+//   padding-left: 1em;
+//   padding-right: 1em;
+//   //border-radius: 0 0 12% 12%;
+// }
+// .main:hover {
+//   background-color: rgba(60,180, 180,0.9);
+// }
+
+
+
+.btn_to {
+  margin-top: -32px;
+  margin-left: 460px;
+
+}
+
+.button_to input{
+  color: red;
+
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.6;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.panel-collapse {
+    background-color: rgba(30,25, 125,0.2);
+}
+  #main-info {
+    width: 27.5%;
+    max-height: 100vh;
+    margin-top: 50px;
+    margin-left: 72px;
+    //background-color: rgba(25,60,10,0.3);
+    //background-color: rgba(70,130, 180,0.7);
+    overflow-y:auto;
+    z-index:9;
+    position:fixed;
+    overflow: auto;
+    font-family: monospace;
+  }
+
+//
+//
+// .button_to input:focus,
+//  {
+//   color: #ffffff;
+//   background-color: #286090;
+//   border-color: #122b40;
+// }
 // .info {
 //   width: 50px;
 //   height: 50px;
