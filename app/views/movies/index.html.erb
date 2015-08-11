@@ -79,30 +79,27 @@ index = 0
 
 
     content = "<div class='panel-group' id='accordion'>";
+    if (movie_array.length == 1) {
+      var additional_class = "in";
+    }
+    else {
+      var additional_class = "";
+    }
     for(var index in movie_array) {
       var coll = movie_array[index].title.split(" ")[0];
-    //  "<div class='panel-heading'><h4 class='panel-title'><a data-toggle='collapse' data-parent='#accordion' href='#collapseOne'>"
       content += "<div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><a data-toggle='collapse' data-parent='#accordion' href='#"+coll+"' class='title'>"+movie_array[index].title+"</a></h4></div>" +
-                  "<div id='"+coll+"' class='panel-collapse collapse'><div class='panel-body'><span class='movie'>Actors: </span>" +
+                  "<div id='"+coll+"' class='panel-collapse collapse " + additional_class + "'><div class='panel-body'><span class='movie'>Actors: </span>" +
                    "<span class='info-movie'>" + movie_array[index].actors.join(", ") + "</span>" + "<br>" +
                    "<span class='movie'>Release year: </span>" +
                    "<span class='info-movie'>" + movie_array[index].release_year + "</span>" +
                    "<br>" + "<span class='movie'>Address: </span>" + "<span class='info-movie'>" + movie_array[index].address + "</span>"
 
-
-
-
-
-
-    //  content += "<hr>";
       if (movie_array[index].funfuct === null) {
         content +=  "</div></div></div>";
 
        }
       else {
-
-          content += "<br>" + "<span class='movie'>Fun Fucts: </span>" + "<span class='info-movie'>" + movie_array[index].funfuct + "</span>"  + "</div></div></div>";
-
+        content += "<br>" + "<span class='movie'>Fun Fucts: </span>" + "<span class='info-movie'>" + movie_array[index].funfuct + "</span>"  + "</div></div></div>";
         }
     };
     content += "</div>";
