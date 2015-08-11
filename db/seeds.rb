@@ -17,7 +17,7 @@ def self.add_movie(movie)
         Sf.create(title: movie["title"], actor_first: movie["actor_1"], actor_second: movie["actor_2"], actor_third: movie["actor_3"],
                 release_year: movie["release_year"], production_company: movie["production_company"], distributor: movie["distributor"],
                 writer: movie["writer"], director: movie["director"], latitude: lat_lng[0], longitude: lat_lng[1], funfuct: movie['fun_facts'], address: movie["locations"])
-    #  end
+      end
   end
 end
 
