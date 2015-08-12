@@ -20,8 +20,4 @@ class Movie < ActiveRecord::Base
   # end
 
 
-  def self.choose_from_movie(*args)
-    
-    Movie.select('*').where('release_year=? and (actor_first=? or actor_second=? or actor_third=?)', params["year"], params["name"], params["name"], params["name"])
-  end
 end
