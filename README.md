@@ -9,6 +9,7 @@ The information abot movies collected from [ Film Locations.](https://data.sfgov
   ```
   ```
   Geocoder.coordinates(full_address) 
+  => [37.7468059, -122.4194721]
   ```
 
 The user can search movie by name. Also I added basic search filter (by name, year, actor, director and the combination of these filters).
