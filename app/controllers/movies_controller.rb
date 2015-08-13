@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
     @movies = Movie.select("distinct title").order("title")
     if params["movie.title"].nil?
 
-      @movies = Movie.select("distinct title").order("title")
+      #@movies = Movie.select("distinct title").order("title")
       @m = Movie.all
     else
       condition = [!params["movie.title"].empty?, !params["release_year"].empty?, !params["name"].empty?, !params["director"].empty?]
