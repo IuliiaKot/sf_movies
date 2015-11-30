@@ -15,3 +15,11 @@ The information abot movies collected from [ Film Locations.](https://data.sfgov
 The user can search movie by name. Also I added basic search filter (by name, year, actor, director and the combination of these filters).
 
 For backende I choose Ruby on Rails.  In front-end I used JS, CSS framework Bootstrap.
+
+Notes
+
+  If I had more time, I would...
+
+  1. Improve the style for desktop view and add style for mobile devices
+  2. Improve filters
+  3. Add tests.
